@@ -1,0 +1,413 @@
+*{
+    padding: 0;
+    margin: 0;    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;   
+    box-sizing: border-box;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #fff;
+}
+
+a:hover{
+    color: #ffff00;
+}
+
+.center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container{
+    width: 100%;
+    padding-top: 25vh;    
+} 
+
+.section-title{
+    font-weight: 1000;
+    font-size: 3.5vh;  
+    padding-bottom: 1em;  
+}
+
+.text-container p{    
+    text-align: justify;
+    margin-bottom: 0.9em;
+    font-size: 0.9em;
+    color: #000;
+}
+
+
+#wrapper{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas: "header header header header" "side content content content";  
+    /* row-gap: 5vh; */
+}
+
+header{
+    top: 0;
+    height: 20vh;
+    width: 100vw;
+    background-color: #fff; 
+    grid-area: header;   
+    /* position: sticky; */
+    position: fixed;
+}
+
+header h1{
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+    cursor: none;  
+    margin-top: 0.1em;  
+    margin-bottom: 0.1em; 
+    font-family: 'Cinzel' ,serif;
+    font-weight: normal;  
+}
+
+header nav{
+    width: 100%;  
+    background-color: #000;  
+}
+
+header nav ul{
+    width: 100%;
+    list-style: none;
+}
+
+header nav ul li{
+    padding: 0.5em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.sidebar{
+    grid-area: side;
+    width: 22vw;
+    height: 100vh;
+   
+}
+
+.sidebar .work-nav{
+    width: 18vw;
+    height: auto;    
+    background-color: #000; 
+    position:  fixed;
+    top:25vh;
+    left: 4vw;
+    padding: 0.8em 0;
+} 
+
+.sidebar .work-nav h4{
+    width: 80%;
+    color: #fff; 
+    text-align: center;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar .work-nav ul{
+    width: 80%;
+    list-style: none; 
+    color: #fff;  
+    font-size: 0.9em;
+    margin-top: 0.9em;
+}
+
+.sidebar .work-nav ul li{
+    padding: 0.5em 0;
+}
+
+.sidebar .work-nav ul li a{
+    width: 100%;
+}
+
+main{
+    width: 75vw;
+    height: 50px; 
+    grid-area: content;    
+    padding: 0 2em 0 2em;
+} 
+
+main .section-introduction-container{
+    width: 100%;    
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .section-introduction-container .text-container{
+    width: 65%;
+    height: auto;
+    padding-left: 2em;
+}
+
+main .section-introduction-container .content-image{
+    width: 20vw;
+    height: 50vh;
+    object-fit: contain;
+}
+
+main .section-biography-container{
+    width: 100%;    
+    padding-left: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .section-biography-container .text-container{
+    width: 65%;
+    height: auto;    
+}
+
+main .section-biography-container .text-container h3{
+    width: 100%;
+    font-family: 'Cinzel' ,serif; 
+    text-align: center;
+    font-weight: bold;
+    color: #5C3D2E;   
+    padding: 0.9em;
+}
+
+main .section-biography-container .text-container h4{
+    font-weight: 1000;
+    padding-bottom: 0.9em;
+    width: 100%;
+    text-align: center;
+}
+
+main .section-biography-container .image-container{
+    width: 20vw;
+    height: auto;    
+}
+
+main .section-biography-container .image-container figure{
+   width: 100%;
+   margin-bottom: 0.9em;
+}
+
+main .section-biography-container .image-container figure figcaption{
+    width: 100;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+main .section-biography-container .image-container figure div {
+    width: 100%;
+    height: 24vh;  
+}
+
+main .section-biography-container .image-container #figure-medici-shield div{
+    width: 100%;
+    height: 20vw;     
+}
+
+main .section-biography-container .image-container figure div .content-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;  
+}
+
+main .section-style-and-technique-container {
+    width: 100%;
+    padding-left: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .section-style-and-technique-container .text-container{
+    width: 65%;
+    height: auto; 
+    padding: 1em;   
+}
+
+main .section-style-and-technique-container .text-container h3{
+    width: 100%;
+    font-family: 'Cinzel' ,serif; 
+    text-align: center;
+    font-weight: bold;
+    color: #5C3D2E;   
+    padding: 0.9em;
+}
+
+main .section-style-and-technique-container .text-container dl{
+    width: 100;     
+    text-align: justify; 
+    margin-bottom: 1em;
+}
+
+main .section-style-and-technique-container .text-container dl dt{
+    font-size: 0.9em;
+    font-weight: 1000;
+    margin-top: 0.9em;
+    text-align: justify;
+}
+
+main .section-style-and-technique-container .text-container dl dd{
+    font-size: 0.9em;    
+    text-align: justify;
+}
+
+main .section-style-and-technique-container figure{
+    width: 90%;   
+    background-color: #2B2B2B;
+    padding: 5vh 0;
+}
+
+main .section-style-and-technique-container figure .image-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;    
+}
+
+main .section-style-and-technique-container figure .image-container div{
+    width: 30vh;
+    height: 30vh;  
+    background-color: #5C3D2E;
+    border: 2px solid #fff;
+}
+
+main .section-style-and-technique-container figure .image-container div img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+main .section-style-and-technique-container figure figcaption{
+    width: 100%;
+    padding: 1em 1em 0 1em;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center
+}
+
+main .section-utensils-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url('./images/Entombment_Michelangelo.jpg');
+    background-size: cover;
+    
+}
+
+main .section-utensils-container .text-container {
+    width: 65%;
+    height: auto; 
+    padding: 1em;  
+    background-color: rgba(255, 255, 255, 0.699);
+}
+
+main .section-utensils-container .text-container h3{
+    width: 100%;
+    font-family: 'Cinzel' ,serif; 
+    text-align: center;
+    font-weight: bold;
+    color: #5C3D2E;   
+    padding: 0.9em;
+}
+
+main .section-works-container{
+    width: 100%;
+    padding-left: 2em;
+}
+
+main .section-works-container .works-background{
+    width: 90%;
+    background: #2B2B2B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2em 0;
+}
+
+main .section-works-container .works-background figure{
+    height: 35vh;
+    width: 35vh;
+    background-color: #000;
+}
+
+main .section-works-container .works-background figure .image-container{
+  width: 25vh;
+  height: 25vh;
+}
+
+main .section-works-container .works-background figure .image-container .contain-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;    
+}
+
+main .section-works-container .works-background figure figcaption{
+    width: 100%;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+main .section-importance-and-legacy-container {
+    width: 100%;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: row;   
+    justify-content: center;
+}
+
+main .section-importance-and-legacy-container .image-container{
+    width: 15vw;  
+    height: 20vw;      
+    margin-bottom: 1em;
+}
+
+main .section-importance-and-legacy-container .image-container figure{
+    width: 15vw;  
+    height: 21vw;  
+    /* background-color: #000; */
+    margin-bottom: 1em;
+}
+
+main .section-importance-and-legacy-container .image-container figure figcaption{
+    font-size: 0.8em;
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    text-align: center;    
+}
+
+main .section-importance-and-legacy-container .image-container figure img{
+    width: 15vw;
+    height: 18vw;
+    object-fit:fill;
+}
+
+main .section-importance-and-legacy-container .text-container{
+    width: 65%; 
+    height: auto; 
+    padding: 1em;    
+}
+
+
+
