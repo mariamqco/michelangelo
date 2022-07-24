@@ -1,1 +1,1 @@
-This is a web page made with html, css and javascript that shows the most basic information of the artist Miguel Angel Buonarroti (Michelangelo).
+This is a page made with html, css and javascript that shows the most basic information of the artist Miguel Angel Buonarroti (Michelangelo).
