@@ -26,6 +26,10 @@ let section_work_works1 = document.getElementById("section-works-work1");
 let section_work_works2 = document.getElementById("section-works-work2");
 let section_work_works3 = document.getElementById("section-works-work3");
 
+let work_nav_work1 = document.getElementById("work-nav-work1");
+let work_nav_work2 = document.getElementById("work-nav-work2");
+let work_nav_work3 = document.getElementById("work-nav-work3");
+
 gallery_close_button.onclick = function(){   
     gallery_content.style.opacity = '0';
     setTimeout(function(){        
@@ -33,8 +37,7 @@ gallery_close_button.onclick = function(){
     },900);
 }
 
-section_work_works1.onclick = function(){
-
+function showWork1(){
     gallery_display.style.display = 'flex'; 
     gallery_content.style.opacity = '1'; 
     let image = document.createElement('img');
@@ -62,11 +65,10 @@ section_work_works1.onclick = function(){
     piece_text_container.appendChild(paragraph2);
     let paragraph3 = document.createElement('p');
     paragraph3.textContent = "David es una escultura de mármol blanco de 5,17 metros de altura y 5572 kilogramos de masa, realizada por Miguel Ángel Buonarroti entre 1501 y 1504 por encargo de la Opera del Duomo de la catedral de Santa María del Fiore de Florencia. La escultura representa al rey David bíblico en el momento previo a enfrentarse con Goliat, y fue acogida como un símbolo de la República de Florencia frente a la hegemonía de sus derrocados dirigentes, los Médici, y la amenaza de los estados adyacentes, especialmente los Estados Pontificios.";
-    piece_text_container.appendChild(paragraph3);   
-   
+    piece_text_container.appendChild(paragraph3);      
 }
 
-section_work_works2.onclick = function(){
+function showWork2(){
     gallery_display.style.display = 'flex';  
     gallery_content.style.opacity = '1';   
     let image = document.createElement('img');
@@ -94,7 +96,7 @@ section_work_works2.onclick = function(){
     piece_text_container.appendChild(paragraph1);
 }
 
-section_work_works3.onclick = function(){
+function showWork3(){
     gallery_display.style.display = 'flex';      
     gallery_content.style.opacity = '1'; 
     let image = document.createElement('img');
@@ -124,3 +126,12 @@ section_work_works3.onclick = function(){
     paragraph3.textContent = "La Piedad representa el dolor de la Virgen María al sostener en brazos el cadáver de su hijo Jesús cuando desciende de la cruz.";
     piece_text_container.appendChild(paragraph3);
 }
+
+section_work_works1.onclick = showWork1;
+section_work_works2.onclick = showWork2;
+section_work_works3.onclick = showWork3;
+
+work_nav_work1.onclick = showWork1;
+work_nav_work2.onclick = showWork2;
+work_nav_work3.onclick = showWork3;
+
