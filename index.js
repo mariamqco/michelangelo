@@ -135,3 +135,20 @@ work_nav_work1.onclick = showWork1;
 work_nav_work2.onclick = showWork2;
 work_nav_work3.onclick = showWork3;
 
+//code for responsive elements
+
+let work_nav = document.getElementsByClassName("work-nav")[0];
+let highlight_icon_container = document.getElementById("highlight-icon-container");
+highlight_icon_container.onclick = function(){ 
+    let display = window.getComputedStyle(work_nav,null).display;
+    if(display === 'none'){
+        highlight_icon_container.style.backgroundImage = "url(images/menu-close-1.png)"
+        work_nav.style.display = "flex"
+        work_nav.style.height = "auto";
+    }  else if (display === 'flex'){
+        highlight_icon_container.style.backgroundImage = "url(images/star.png)"
+        work_nav.style.height = "0";
+        work_nav.style.display = "none"       
+    }   
+    
+}
