@@ -137,18 +137,31 @@ work_nav_work3.onclick = showWork3;
 
 //code for responsive elements
 
-let work_nav = document.getElementsByClassName("work-nav")[0];
 let highlight_icon_container = document.getElementById("highlight-icon-container");
-highlight_icon_container.onclick = function(){ 
-    let display = window.getComputedStyle(work_nav,null).display;
-    if(display === 'none'){
-        highlight_icon_container.style.backgroundImage = "url(images/menu-close-1.png)"
-        work_nav.style.display = "flex"
-        work_nav.style.height = "auto";
-    }  else if (display === 'flex'){
-        highlight_icon_container.style.backgroundImage = "url(images/star.png)"
-        work_nav.style.height = "0";
-        work_nav.style.display = "none"       
-    }   
-    
+let work_nav = document.getElementsByClassName("work-nav")[0];
+
+let mobile_icon_collection = document.getElementsByClassName("icon-container");
+
+for (let i = 0; i < mobile_icon_collection.length; i++){
+    mobile_icon_collection[i].addEventListener('click', function(){
+        if(this.classList[1] !== "close-icon-container"){
+            this.className += " close-icon-container" ;
+        }else{
+            this.classList.remove("close-icon-container");
+        }        
+    });   
 }
+
+highlight_icon_container.addEventListener('click', function(){
+    if(this.classList[1] == "close-icon-container"){    
+        work_nav.classList.remove('close-element');        
+        setTimeout(() =>{
+            work_nav.className += " open-work-nav"
+        },100)
+    }else{
+        work_nav.classList.remove("open-work-nav");
+        setTimeout(()=>{
+            work_nav.className += " close-element";
+        }, 1100);
+    }
+});

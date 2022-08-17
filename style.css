@@ -602,6 +602,9 @@ footer #credit-container p{
     text-align: right;   
 }
 
+.wrapper .mobile-work-nav {
+    display: none;
+}
 
 @media (max-width: 500px){
 
@@ -624,18 +627,25 @@ footer #credit-container p{
         width: auto;
     }
 
-    header #menu-icon-container{
+    
+    .icon-container{
         height: 20px;
         width: 20px;
-        background-image: url(./images/menu.png);
         background-size: cover;
+        cursor: pointer;
+    }
+
+    header #menu-icon-container{       
+        background-image: url(./images/menu.png);        
     }
 
     header #highlight-icon-container{
-        height: 20px;
-        width: 20px;
-        background-image: url(./images/star.png);
-        background-size: cover;
+        background-image: url(./images/star.png);        
+    }
+
+
+    .close-icon-container{        
+        background-image: url(./images/menu-close-1.png) !important;    
     }
 
     header nav{
@@ -643,35 +653,28 @@ footer #credit-container p{
     }
 
     .wrapper .work-nav{
-        width: 100%;
-        top: 60px;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.95);     
-        transition: 5s;   
-        display: none;       
+        top:60px;
+        left: 0;        
+        width: 100%; 
+        opacity: 0;        
+        transition: opacity 1s;                         
     }
 
-    .wrapper .work-nav h4{
-        width: 60%;
-        color: #fff; 
-        text-align: center;
-        padding-bottom: 0.8em;
-        border-bottom: 1px solid #fff;
-        font-size: 0.9rem; 
-    }
-    
-    .work-nav ul{
-        width: 100%;
-        list-style: none; 
-        color: #fff;  
-        font-size: 0.8em;
-        margin-top: 0.7rem;
-        text-align: center;
-        transition: 0.5s;
+    .wrapper .work-nav ul li{         
+         text-align: center;
+         transition: background-color 0.5s;
     }
 
-    .work-nav ul li:active{
-        background-color: #000;
+    .wrapper .work-nav ul li:active, .wrapper .work-nav ul li:hover{
+        background-color:#2B2B2B;
+    }
+
+    .wrapper .open-work-nav{
+        opacity: 1;
+    }
+
+    .wrapper .close-element{
+        display: none !important;
     }
 
     .wrapper main{
@@ -723,9 +726,84 @@ footer #credit-container p{
         height: 100%;
         object-fit: cover;
     }
+
+    .wrapper main .section-biography-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;  
+        padding-left:  1rem; 
+        padding-right: 1rem;          
+    }
+    
+    .wrapper main .section-biography-container .image-container{
+        width: 100%;
+        height: auto;          
+    }    
+         
+    .wrapper main .section-biography-container .image-container figure div {
+        width: 100%;
+        height: 20vh;  
+    }
+     
+    .wrapper main .section-biography-container .image-container #figure-medici-shield div{
+        width: 100%;
+        height: auto ; 
+        
+    }
+
+    .wrapper main .section-biography-container .image-container figure figcaption{     
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .wrapper main .section-style-and-technique-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;  
+        padding-left:  1rem; 
+        padding-right: 1rem;          
+    }
+
+    .wrapper main .section-style-and-technique-container .text-container{
+        padding: 0;
+    }
+
+    .wrapper main .section-style-and-technique-container figure{
+        width: 100%;
+        padding: 2vh 0;
+    }
+
+    .wrapper main .section-style-and-technique-container figure .image-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;          
+    }
+
+    .wrapper main .section-style-and-technique-container figure .image-container div{
+        margin: 2vh;
+    }
+    
+    .wrapper main .section-style-and-technique-container .text-container dl dt{
+        font-size: 0.9rem;
+      
+    }
+    
+    .wrapper main .section-style-and-technique-container .text-container dl dd{
+        font-size: 0.9rem;    
+       
+    }
+
+
+ 
+
     
    
-   
+
+    
+    
+     
+     
+
     
     
     
